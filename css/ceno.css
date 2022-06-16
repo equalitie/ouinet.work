@@ -1,0 +1,157 @@
+/* @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700'); */  /* disabled for privacy reasons */
+@import 'all.css';  /* Font Awesome */
+
+body {
+    font-family: Inter, sans-serif !important;
+    font-size: 1.08em;
+    background-color: #f0f9ff;
+    min-height: 75rem;
+    padding-top: 4.5rem;
+}
+
+h1 {
+    font-family: Metropolis, sans-serif;
+    font-size: 2.6em;
+    color: #7812ED;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: Metropolis, sans-serif;
+    font-size: 2em;
+    color: #ED7B12;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+h3 {
+    font-family: Metropolis, sans-serif;
+    font-size: 1.4em;
+    color: #ED7B12;
+    font-weight:500;
+    margin-top: 20px !important;
+}
+
+hr {
+    border-width: 6px 0 0;
+    border-color: #7812ED;
+    border-style: solid none none;
+    margin: 30px 0 10px;
+    opacity: 100;
+}
+
+a {
+    color: #ED7B12;
+}
+
+a:hover {
+    color: #0c4a6e;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+#language-selector {
+    color: #7812ED;
+    padding-left: 1rem;
+}
+
+p {
+    font-family: Inter, sans-serif;
+    font-size: 1.08em;
+}
+
+ol li {
+    list-style: decimal;
+    list-style-position: inside;
+}
+
+.navbar li:nth-child(n+1) {
+    list-style: none;
+}
+
+li {
+    font-size: 1.08em;
+    list-style: square;
+}
+
+img#equalitieLogo {
+    margin-top: 26px;
+    width: 162px;
+}
+
+img.hasBorder { 
+    border:2px solid #ED7812;
+    border-radius: 15px;
+}
+
+div.row {
+    margin: 20 !important;
+}
+
+.section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.section > h2 {
+    -margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.icons i {
+   color: #EA7812;
+}
+
+.icons svg {
+   color: #EA7812;
+}
+
+.btn-danger {
+    color: #EA7812;
+    font-size:1em;
+}
+
+.btn-outline-danger {
+    border-color: #EA7812;
+    font-size:1.25em;
+    color: #EA7812;
+}
+
+.btn-outline-danger:hover {
+   background-color: #EA7812;
+   border-color: #EA7812;
+   color: #FFFFFF;
+}
+
+.navbar-light .navbar-nav .nav-link {    
+    background-color: white;
+    color: #7812ED;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+    padding-right: .75rem;
+    padding-left: .75rem;
+}
+
+[dir=ltr] .fa-pull-start {
+    float: left;
+    margin-right: .3em;
+}
+
+[dir=rtl] .fa-pull-start {
+    float: right;
+    margin-left: .3em;
+}
+
+[dir=ltr] .fa-pull-end {
+    float: right;
+    margin-left: .3em;
+}
+
+[dir=rtl] .fa-pull-end {
+    float: left;
+    margin-right: .3em;
+}

@@ -1,0 +1,22 @@
+<title>Ouinet | About</title>
+    <div class="container-md section" id="howitworks">
+
+	    <h1>How Ouinet Works</h1>
+<section>
+<p>Ouinet is a Free/Open Source technology which allows web content to be served with the help of an entire network of cooperating nodes using peer-to-peer routing and distributed caching of responses. This helps mitigate the Web's characteristic single point of failure due to a client application not being able to connect to a particular server.</p>
+
+<p>The typical Ouinet client node setup consists of a web browser or other application using a special HTTP proxy or API provided by a dedicated program or library on the local machine. When the client gets a request for content, it attempts to retrieve the resource using several mechanisms. It tries to fetch the page from a distributed cache by looking up the content in a distributed cache index (like the BitTorrent DHT), and if not available, it contacts a trusted injector server over a peer-to-peer routing system (like I2P) and asks it to fetch the page and store it in the distributed cache.</p>
+
+<p><img src="../img/infographic.png" alt="Ouinet request/response flow"></p>
+
+<p>Future access by client nodes to popular content inserted in distributed storage shall benefit from increased redundancy and locality, which translates to: increased availability in the face of connectivity problems; increased transfer speeds in case of poor upstream links; and reduced bandwidth costs when internet access providers charge more for external or international traffic. Content injection is also designed to allow for content re-introduction and seeding in extreme cases of total connectivity loss (e.g. natural disasters).</p>
+
+<p>The Ouinet library is a core technology that can be used by any application to benefit from these advantages. Ouinet integration provides any content creator the opportunity to use cooperative networking and storage for the delivery of their content to users around the world.</p>
+
+<div class="d-grid gap-2 justify-content-center">
+<!-- TRANSLATORS: Replace "en" in the link by your language code if the Manual is available for it. -->
+<a href="../docs.html" style="text-align:center"><button class="btn btn-outline-danger btn-learnmore mt-3 mb-3" type="button" style="text-align: center;"><span class="fas fa-book"></span>  Learn more in our Docs</button></a>
+</div>
+    </div> <!-- end container-md section -->
+</section>
+

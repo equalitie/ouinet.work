@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Content Access Systems - Ouinet Documentation</title>
+
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../FontAwesome/css/all.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/all.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var body = document.querySelector('body');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+		<img src="../img/ouinet-logo.png" style="width:200px">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Welcome</a></li><li class="chapter-item expanded "><a href="../intro/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../build/index.html"><strong aria-hidden="true">2.</strong> Building from Source</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../build/docker.html"><strong aria-hidden="true">2.1.</strong> Docker</a></li><li class="chapter-item expanded "><a href="../build/vagrant.html"><strong aria-hidden="true">2.2.</strong> Vagrant</a></li><li class="chapter-item expanded "><a href="../build/testing.html"><strong aria-hidden="true">2.3.</strong> Testing</a></li></ol></li><li class="chapter-item expanded "><a href="../integration/index.html"><strong aria-hidden="true">3.</strong> Integration Guide</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../integration/examples.html"><strong aria-hidden="true">3.1.</strong> Example Apps</a></li></ol></li><li class="chapter-item expanded "><a href="../how/index.html"><strong aria-hidden="true">4.</strong> How it Works</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../how/components.html"><strong aria-hidden="true">4.1.</strong> Actors and Components</a></li><li class="chapter-item expanded "><a href="../how/content.html" class="active"><strong aria-hidden="true">4.2.</strong> Content Access Systems</a></li><li class="chapter-item expanded "><a href="../how/cache.html"><strong aria-hidden="true">4.3.</strong> Distributed Cache</a></li><li class="chapter-item expanded "><a href="../how/injectors.html"><strong aria-hidden="true">4.4.</strong> Injector Servers</a></li><li class="chapter-item expanded "><a href="../how/client.html"><strong aria-hidden="true">4.5.</strong> Client Library</a></li></ol></li><li class="chapter-item expanded "><a href="../contribute/index.html"><strong aria-hidden="true">5.</strong> Contribute</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Ouinet Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="content-access-systems"><a class="header" href="#content-access-systems">Content Access Systems</a></h1>
+<p>The Ouinet client library uses three distinct methods for getting access to a web resource. It can establish a connection through an injector server, through one of a variety of methods; it can fetch a resource from the distributed cache, if the resource is eligible for caching; or it can make a direct connection to the authoritative webserver serving the resource, and avoid any Ouinet-specific complications.</p>
+<p>These access methods have different strengths and weaknesses, and will work well in different situations. In the worst case, the Ouinet client will try all of these methods, with different configurations, until it succeeds in fetching the resource. Trying different methods exhaustively is quite inefficient, however, both in terms of request latency and in bandwidth usage. Thus, where possible, the Ouinet client will try to estimate which method is likely to work well for different resources and conditions, and minimize inefficiency by trying likely options first.</p>
+<h2 id="direct-origin-access"><a class="header" href="#direct-origin-access">Direct origin access</a></h2>
+<p>The most straightforward way the Ouinet client can satisfy a resource request is to simply forward the request to the webserver responsible for serving the resource, like a standard proxy server. Ideally, the Ouinet client could try this before doing anything else, and only move on to more indirect ways of fetching the same resource if this direct attempt fails.</p>
+<p>In practice, this is not as straightforward as it first appears. Networks that block access to particular content do not typically provide a machine-readable signal that access has been blocked. If a network blocks access to a resource by making it impossible for the Ouinet client to establish a connection to the origin webserver, or by terminating such a connection prematurely, the Ouinet library can indeed register the failure and move on to other content access mechanisms. Many content-blocking networks, however, instead choose to serve a webpage explaining in human-readable text that access to this content has been blocked. When this happens, it is more difficult for the Ouinet client to notice that the request did not complete as desired; such error pages do not usually come with an obvious marker by which the Ouinet client can distinguish the error message from the desired resource, and certainly do not do so reliably.</p>
+<p>For content that is served over HTTPS, the TLS layer can be used to distinguish between genuine responses and network-inserted error messages. A content-blocking network will not be able to provide a valid TLS certificate for the domain whose content it seeks to block, and this failure to establish a properly-certified TLS connection functions as a reliable signal that the direct origin access attempt has failed.</p>
+<p>For content served without TLS, however, the Ouinet client has no such recourse, and indeed Ouinet cannot reliably recognize blocked pages when using direct origin access. As a consequence, direct origin access without HTTPS will ideally only be enabled in applications where the application or the user can provide the Ouinet client with feedback about success or failure of a direct origin access attempt. For example, a web browser application might have a button whereby a user can report a block page to the Ouinet client; an application using the Ouinet library to access its HTTP API can report a failure if the API response does not have the expected syntax. When this facility is used, the Ouinet client can then choose to avoid direct origin access for future requests, entirely or for a particular class of requests.</p>
+<h2 id="injector-server-connection"><a class="header" href="#injector-server-connection">Injector server connection</a></h2>
+<p>The Ouinet project operates a collection of <em>injector servers</em>, which function as a variant of an HTTP proxy server. The client library can satisfy content requests by establishing a connection to such an injector server, and forwarding content requests to it.</p>
+<p>In addition to functioning as a proxy server, the other main responsibility of injector servers is to add (&quot;inject&quot;) web content into the distributed cache. When an injector server serves a proxy request for a Ouinet client, a determination is made whether the assorted response is eligible for caching. If it is, the injector server then creates a signature that covers the response body, headers, and key metadata such as the resource URI and retrieval date. This signature serves as a certificate that the complete HTTP response has been retrieved from the authoritative origin server by a trusted injector server. The injector server then sends this signature to the requesting Ouinet client, along with the content response proper.</p>
+<p>The combination of a response body, head, metadata, and injector signature for a particular web resource forms a <em>cache entry</em> used by the distributed cache system. Any party in the possession of a cache entry can share this entry with other peers; by verifying the signature that is part of a cache entry, a peer receiving such an entry can verify the legitimacy of the entry, as certified by the signatory injector server. After receiving a combination of a content response and a cache entry signature from an injector server, the requesting client can choose to start sharing the resulting cache entry in the distributed cache. The injector server may also choose to start sharing the cache entry in the distributed cache on its own, if it so chooses.</p>
+<p>The Ouinet project contains several different mechanisms by which a client can establish a connection to an injector server. These mechanisms take the form of different protocols and tunneling systems that can carry a stream-oriented connection as a payload, over which standard protocols such as TLS and HTTP can be transmitted. Injector servers are configured to serve requests via multiple such mechanisms, allowing the Ouinet client to use whichever mechanism that does not trigger network blockages.</p>
+<h2 id="distributed-cache-lookups"><a class="header" href="#distributed-cache-lookups">Distributed cache lookups</a></h2>
+<p>The Ouinet network uses a peer-to-peer network that different parties can use to share among each other stored versions of cache-eligible resources. When an injector server serves a client request and determines the corresponding response to be eligible for caching, it can create a <em>cache entry</em> that can be used by clients to satisfy content requests, in the same way as would be used by a standard caching HTTP proxy server. Clients holding a copy of such a cache entry can use the peer-to-peer network to share it with other interested clients; and conversely, a Ouinet client trying to satisfy a content request can do so by contacting a peer that holds a cache entry for this resource, and requesting a peer-to-peer transfer of this cache entry. Together, this system forms the Ouinet <em>distributed cache</em>.</p>
+<p>Cache entries can only be prepared for distribution in the distributed cache by the authority of an injector server. When an injector server decides that a particular resource response is suitable for use as a cache entry, it will create a cryptographic signature certifying this decision, as described in the previous section. Only cache entries containing such a signature can be shared in the distributed cache, and clients trying to fetch a resource from the distributed cache will verify this signature. In this way, the injector servers as a whole form the root of trust for all content exchanged in the distributed cache. By only sharing and using cache entries that have been certified by a trusted injector server, clients can be confident that the cache data matches the response that a trusted party has received from an authoritative origin server. In particular, this makes it impossible for an attacker to add forged cache entries to the distributed cache, ensuring the legitimacy of responses served from it.</p>
+<p>The Ouinet client does need to verify that a cache entry received from the distributed cache is usable for the assorted content request. It needs to verify, for example, that the cache entry is not expired, and that the response is applicable to the constraints set in the request headers. The details of this procedure are described in the <a href="#distributed-cache">Distributed Cache</a> section.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../how/components.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../how/cache.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../how/components.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../how/cache.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

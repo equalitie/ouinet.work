@@ -1,0 +1,506 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Example Apps - Ouinet Documentation</title>
+
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../FontAwesome/css/all.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/all.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var body = document.querySelector('body');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+		<img src="../img/ouinet-logo.png" style="width:200px">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Welcome</a></li><li class="chapter-item expanded "><a href="../intro/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../build/index.html"><strong aria-hidden="true">2.</strong> Building from Source</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../build/docker.html"><strong aria-hidden="true">2.1.</strong> Docker</a></li><li class="chapter-item expanded "><a href="../build/vagrant.html"><strong aria-hidden="true">2.2.</strong> Vagrant</a></li><li class="chapter-item expanded "><a href="../build/testing.html"><strong aria-hidden="true">2.3.</strong> Testing</a></li></ol></li><li class="chapter-item expanded "><a href="../integration/index.html"><strong aria-hidden="true">3.</strong> Integration Guide</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../integration/examples.html" class="active"><strong aria-hidden="true">3.1.</strong> Example Apps</a></li></ol></li><li class="chapter-item expanded "><a href="../how/index.html"><strong aria-hidden="true">4.</strong> How it Works</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../how/components.html"><strong aria-hidden="true">4.1.</strong> Actors and Components</a></li><li class="chapter-item expanded "><a href="../how/content.html"><strong aria-hidden="true">4.2.</strong> Content Access Systems</a></li><li class="chapter-item expanded "><a href="../how/cache.html"><strong aria-hidden="true">4.3.</strong> Distributed Cache</a></li><li class="chapter-item expanded "><a href="../how/injectors.html"><strong aria-hidden="true">4.4.</strong> Injector Servers</a></li><li class="chapter-item expanded "><a href="../how/client.html"><strong aria-hidden="true">4.5.</strong> Client Library</a></li></ol></li><li class="chapter-item expanded "><a href="../contribute/index.html"><strong aria-hidden="true">5.</strong> Contribute</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Ouinet Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="example-apps"><a class="header" href="#example-apps">Example Apps</a></h1>
+<h2 id="ouinets-test-application-in-kotlin"><a class="header" href="#ouinets-test-application-in-kotlin">Ouinet's test application in Kotlin</a></h2>
+<h3 id="prepare-your-app-for-using-ouinet"><a class="header" href="#prepare-your-app-for-using-ouinet">Prepare your app for using Ouinet</a></h3>
+<p>Add Ouinet lib and Relinker to your dependencies list in <strong>app/build.gradle</strong>:</p>
+<pre><code class="language-groovy">dependencies {
+    // ...
+    implementation 'ie.equalit.ouinet:ouinet-armeabi-v7a:0.20.0'
+    implementation 'com.getkeepsafe.relinker:relinker:1.4.4'
+}
+</code></pre>
+<p>Import <code>Ouinet</code> in your Android activity and create a private variable to hold the client:</p>
+<pre><code class="language-kotlin">import ie.equalit.ouinet.Ouinet
+
+class MainActivity : AppCompatActivity() {
+    private lateinit var ouinet: Ouinet
+    // ...
+}
+</code></pre>
+<p>Import <code>Config</code> and setup the Ouinet client:</p>
+<pre><code class="language-kotlin">import ie.equalit.ouinet.Config
+// ...
+
+class MainActivity : AppCompatActivity() {
+    // ...
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+
+        var config = Config.ConfigBuilder(this)
+            .setCacheType(&quot;bep5-http&quot;)
+            .build()
+
+        ouinet = Ouinet(this, config)
+        ouinet.start()
+        // ...
+    }
+}
+</code></pre>
+<h3 id="pass-config-values-to-ouinet-during-the-build-process"><a class="header" href="#pass-config-values-to-ouinet-during-the-build-process">Pass config values to Ouinet during the build process</a></h3>
+<p>You can have Ouinet keys and passwords added to the
+client during the building process by Gradle.</p>
+<p>You just need to create a <code>local.properties</code> file in the root of this project
+and set the values as follows before building the app:</p>
+<pre><code class="language-groovy">CACHE_PUB_KEY=&quot;YOUR OUINET CACHE PUB KEY&quot;
+INJECTOR_CREDENTIALS=&quot;ouinet:YOURINJECTORPASSWORD&quot;
+// It's important to keep the new line characters in the beggining and the end
+// of certificate delimiters
+INJECTOR_TLS_CERT=&quot;-----BEGIN CERTIFICATE-----\\n\
+ABCDEFG...\
+\\n-----END CERTIFICATE-----&quot;
+</code></pre>
+<p>Those values should be loaded by Gradle during the build process in <strong>app/build.gradle</strong>:</p>
+<pre><code class="language-groovy">...
+
+Properties localProperties = new Properties()
+localProperties.load(rootProject.file('local.properties').newDataInputStream())
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        ...
+        buildConfigField &quot;String&quot;, &quot;CACHE_PUB_KEY&quot;, localProperties['CACHE_PUB_KEY']
+        buildConfigField &quot;String&quot;, &quot;INJECTOR_CREDENTIALS&quot;, localProperties['INJECTOR_CREDENTIALS']
+        buildConfigField &quot;String&quot;, &quot;INJECTOR_TLS_CERT&quot;, localProperties['INJECTOR_TLS_CERT']
+    }
+    ...
+}
+</code></pre>
+<p>and can be referenced after that from Kotlin via <code>BuildConfig</code>:</p>
+<pre><code class="language-kotlin">var config = Config.ConfigBuilder(this)
+    // ...
+    .setCacheHttpPubKey(BuildConfig.CACHE_PUB_KEY)
+    .setInjectorCredentials(BuildConfig.INJECTOR_CREDENTIALS)
+    .setInjectorTlsCert(BuildConfig.INJECTOR_TLS_CERT)
+    .build()
+</code></pre>
+<h3 id="send-an-http-request-through-ouinet"><a class="header" href="#send-an-http-request-through-ouinet">Send an HTTP request through Ouinet</a></h3>
+<p>Create a Proxy object pointing to Ouinet's service <code>127.0.0.1:8077</code>:</p>
+<pre><code class="language-kotlin">val ouinetService = Proxy(Proxy.Type.HTTP, InetSocketAddress(&quot;127.0.0.1&quot;, 8077))
+</code></pre>
+<p>Pass the Proxy object to your HTTP client (we're using <code>OKHTTPClient</code> in this example):</p>
+<pre><code class="language-kotlin">OkHttpClient.Builder().proxy(ouinetService).build()
+</code></pre>
+<h3 id="validate-ouinets-tls-cert"><a class="header" href="#validate-ouinets-tls-cert">Validate Ouinet's TLS cert</a></h3>
+<p>A TLS certificate is automatically generated by Ouinet and used for it's
+interactions with the HTTP clients. You can implement a custom <code>TrustManager</code>:</p>
+<pre><code class="language-kotlin">inner private class OuinetTrustManager : X509TrustManager {
+    // ...
+
+    override fun checkServerTrusted(chain: Array&lt;X509Certificate&gt;, authType: String) {
+        //...
+    }
+
+    // ...
+    override fun getAcceptedIssuers(): Array&lt;X509Certificate&gt; {
+        return arrayOf(ca as X509Certificate)
+    }
+}
+</code></pre>
+<p>then you can load the <code>X509TrustManager</code>:</p>
+<pre><code class="language-kotlin">ouinetDir = config.ouinetDirectory
+caInput = FileInputStream(ouinetDir + &quot;/ssl-ca-cert.pem&quot;)
+val cf = CertificateFactory.getInstance(&quot;X.509&quot;)
+ca = cf.generateCertificate(caInput)
+</code></pre>
+<p>and add it to your own <code>KeyChain</code>:</p>
+<pre><code class="language-kotlin">val keyStore = KeyStore.getInstance(KeyStore.getDefaultType())
+keyStore.load(null, null)
+keyStore.setCertificateEntry(&quot;ca&quot;, certificateAuthority)
+</code></pre>
+<p>The resulting <code>TrustManager</code> can be used by the <code>OKHttpClient.Builder</code> to set
+a custom <code>sslSocketFactory</code> that verifies only the requests coming from Ouinet:</p>
+<pre><code class="language-kotlin">val builder = OkHttpClient.Builder()
+builder.sslSocketFactory(
+    getSSLSocketFactory(trustManagers),
+    (trustManagers[0] as X509TrustManager)
+)
+</code></pre>
+<h3 id="test-ouinet-access-mechanisms"><a class="header" href="#test-ouinet-access-mechanisms">Test Ouinet access mechanisms</a></h3>
+<p>During your tests you can easily disable any of the different access methods
+available in Ouinet when the Config object is build:</p>
+<ul>
+<li>Force Origin Access</li>
+</ul>
+<pre><code class="language-kotlin">var config = Config.ConfigBuilder(this)
+    // ...
+    .setDisableProxyAccess(true)
+    .setDisableInjectorAccess(true)
+    .build()
+</code></pre>
+<ul>
+<li>Force Injector Access</li>
+</ul>
+<pre><code class="language-kotlin">var config = Config.ConfigBuilder(this)
+    // ...
+    .setDisableOriginAccess(true)
+    .setDisableProxyAccess(true)
+    .build()
+</code></pre>
+<ul>
+<li>Force Proxy Access</li>
+</ul>
+<pre><code class="language-kotlin">var config = Config.ConfigBuilder(this)
+    // ...
+    .setDisableOriginAccess(true)
+    .setDisableInjectorAccess(true)
+    .build()
+</code></pre>
+<h2 id="ouinets-test-application-in-java"><a class="header" href="#ouinets-test-application-in-java">Ouinet's test application in Java</a></h2>
+<h3 id="prepare-your-app-for-using-ouinet-1"><a class="header" href="#prepare-your-app-for-using-ouinet-1">Prepare your app for using Ouinet</a></h3>
+<p>Add Ouinet lib and Relinker to your dependencies list in <strong>app/build.gradle</strong>:</p>
+<pre><code class="language-groovy">dependencies {
+    ...
+    implementation 'ie.equalit.ouinet:ouinet:1.5.0'
+    implementation 'com.getkeepsafe.relinker:relinker:1.4.4'
+}
+</code></pre>
+<p>Import Ouinet in your Android activity and create a private variable to hold the client:</p>
+<pre><code class="language-java">import ie.equalit.ouinet.Ouinet;
+
+public class MainActivity extends AppCompatActivity {
+    private Ouinet ouinet;
+    
+    ...
+}
+</code></pre>
+<p>Import config and setup the Ouinet client:</p>
+<pre><code class="language-java">import ie.equalit.ouinet.Ouinet;
+
+public class MainActivity extends AppCompatActivity {
+    private Ouinet ouinet;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        ...
+        
+        Config config = new Config.ConfigBuilder(this)
+                        .setCacheType(&quot;bep5-http&quot;)
+                        .build();
+
+        ouinet = new Ouinet(this, config);
+        ouinet.start();
+        
+        ...
+    }
+}
+
+</code></pre>
+<h3 id="pass-config-values-to-ouinet-during-the-build-process-1"><a class="header" href="#pass-config-values-to-ouinet-during-the-build-process-1">Pass config values to Ouinet during the build process</a></h3>
+<p>You can have Ouinet keys and passwords added to the
+client during the building process by Gradle.</p>
+<p>You just need to create a <code>local.properties</code> file in the root of this project
+and set the values as follows before building the app:</p>
+<pre><code class="language-groovy">CACHE_PUB_KEY=&quot;YOUR OUINET CACHE PUB KEY&quot;
+INJECTOR_CREDENTIALS=&quot;ouinet:YOURINJECTORPASSWORD&quot;
+INJECTOR_TLS_CERT=&quot;-----BEGIN CERTIFICATE-----\\n\
+ABCDEFG...\
+\\n-----END CERTIFICATE-----&quot;
+</code></pre>
+<p>Those values should be loaded by Gradle during the build process in <strong>app/build.gradle</strong>:</p>
+<pre><code class="language-groovy">...
+
+Properties localProperties = new Properties()
+localProperties.load(rootProject.file('local.properties').newDataInputStream())
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        ...
+        buildConfigField &quot;String&quot;, &quot;CACHE_PUB_KEY&quot;, localProperties['CACHE_PUB_KEY']
+        buildConfigField &quot;String&quot;, &quot;INJECTOR_CREDENTIALS&quot;, localProperties['INJECTOR_CREDENTIALS']
+        buildConfigField &quot;String&quot;, &quot;INJECTOR_TLS_CERT&quot;, localProperties['INJECTOR_TLS_CERT']
+    }
+    ...
+}
+</code></pre>
+<p>and can be referenced after that from Java via <code>BuildConfig</code>:</p>
+<pre><code class="language-java">public class MainActivity extends AppCompatActivity {
+    ...
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        ...
+
+        Config config = new Config.ConfigBuilder(this)
+                .setCacheType(&quot;bep5-http&quot;)
+                .setCacheHttpPubKey(BuildConfig.CACHE_PUB_KEY) //From local.properties
+                .setInjectorCredentials(BuildConfig.INJECTOR_CREDENTIALS)
+                .setInjectorTlsCert(BuildConfig.INJECTOR_TLS_CERT)
+                .build();
+        
+        ...
+    }
+}
+</code></pre>
+<h3 id="send-an-http-request-through-ouinet-1"><a class="header" href="#send-an-http-request-through-ouinet-1">Send an HTTP request through Ouinet</a></h3>
+<p>Create a Proxy object pointing to Ouinet's service <code>127.0.0.1:8077</code>:</p>
+<pre><code class="language-java">Proxy ouinetService= new Proxy(Proxy.Type.HTTP, new InetSocketAddress(&quot;127.0.0.1&quot;, 8077));
+</code></pre>
+<p>Pass the Proxy object to your HTTP client (we're using <code>OKHTTPClient</code> in this example):</p>
+<pre><code class="language-java">OkHttpClient client = new OkHttpClient.Builder().proxy(ouinetService).build();
+</code></pre>
+<h3 id="validate-ouinets-tls-cert-1"><a class="header" href="#validate-ouinets-tls-cert-1">Validate Ouinet's TLS cert</a></h3>
+<p>A TLS certificate is automatically generated by Ouinet and used for it's
+interactions with the HTTP clients. You can implement a custom <code>TrustManager</code>:</p>
+<pre><code class="language-java">private class OuinetTrustManager implements X509TrustManager {
+    ...
+
+    public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+        ...
+    }
+
+    public X509Certificate[] getAcceptedIssuers() {
+        return new X509Certificate[]{(X509Certificate) ca};
+    }
+}
+</code></pre>
+<p>Then you can load the <code>X509TrustManager</code></p>
+<pre><code class="language-java">ouinet_dir = config.getOuinetDirectory();
+caInput = new FileInputStream(ouinet_dir + &quot;/ssl-ca-cert.pem&quot;);
+CertificateFactory cf = CertificateFactory.getInstance(&quot;X.509&quot;);
+ouinet_ca = cf.generateCertificate(caInput);
+</code></pre>
+<p>and add it to your own <code>KeyChain</code>:</p>
+<pre><code class="language-java">KeyStore keyStore = KeyStore.getInstance(KeyStore.getDefaultType());
+keyStore.load(null, null);
+keyStore.setCertificateEntry(&quot;ca&quot;, ouinet_ca);
+</code></pre>
+<p>The resulting <code>TrustManager</code> can be used by the <code>OKHttpClient.Builder</code> to set
+a custom <code>sslSocketFactory</code> that verifies only the requests coming from Ouinet:</p>
+<pre><code class="language-java">OkHttpClient.Builder builder = new OkHttpClient.Builder();
+builder.sslSocketFactory(
+        getSSLSocketFactory(ouinetTrustManager),
+        (X509TrustManager) ouinetTrustManager[0]);
+</code></pre>
+<h3 id="test-ouinet-access-mechanisms-1"><a class="header" href="#test-ouinet-access-mechanisms-1">Test Ouinet access mechanisms</a></h3>
+<p>During your tests you can easily disable any of the different access methods
+available in Ouinet when the Config object is build:</p>
+<ul>
+<li>Force Origin Access</li>
+</ul>
+<pre><code class="language-java">Config config = new Config.ConfigBuilder(this)
+        ...
+    .setDisableProxyAccess(true)
+    .setDisableInjectorAccess(true)
+    .build();
+</code></pre>
+<ul>
+<li>Force Injector Access</li>
+</ul>
+<pre><code class="language-java">Config config = new Config.ConfigBuilder(this)
+        ...
+        .setDisableOriginAccess(true)
+        .setDisableProxyAccess(true)
+        .build();
+</code></pre>
+<ul>
+<li>Force Proxy Access</li>
+</ul>
+<pre><code class="language-java">Config config = new Config.ConfigBuilder(this)
+        ...
+        .setDisableOriginAccess(true)
+        .setDisableInjectorAccess(true)
+        .build();
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../integration/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../how/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../integration/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../how/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

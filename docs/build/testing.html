@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Testing - Ouinet Documentation</title>
+
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../FontAwesome/css/all.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/all.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var body = document.querySelector('body');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+		<img src="../img/ouinet-logo.png" style="width:200px">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Welcome</a></li><li class="chapter-item expanded "><a href="../intro/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../build/index.html"><strong aria-hidden="true">2.</strong> Building from Source</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../build/docker.html"><strong aria-hidden="true">2.1.</strong> Docker</a></li><li class="chapter-item expanded "><a href="../build/vagrant.html"><strong aria-hidden="true">2.2.</strong> Vagrant</a></li><li class="chapter-item expanded "><a href="../build/testing.html" class="active"><strong aria-hidden="true">2.3.</strong> Testing</a></li></ol></li><li class="chapter-item expanded "><a href="../integration/index.html"><strong aria-hidden="true">3.</strong> Integration Guide</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../integration/examples.html"><strong aria-hidden="true">3.1.</strong> Example Apps</a></li></ol></li><li class="chapter-item expanded "><a href="../how/index.html"><strong aria-hidden="true">4.</strong> How it Works</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../how/components.html"><strong aria-hidden="true">4.1.</strong> Actors and Components</a></li><li class="chapter-item expanded "><a href="../how/content.html"><strong aria-hidden="true">4.2.</strong> Content Access Systems</a></li><li class="chapter-item expanded "><a href="../how/cache.html"><strong aria-hidden="true">4.3.</strong> Distributed Cache</a></li><li class="chapter-item expanded "><a href="../how/injectors.html"><strong aria-hidden="true">4.4.</strong> Injector Servers</a></li><li class="chapter-item expanded "><a href="../how/client.html"><strong aria-hidden="true">4.5.</strong> Client Library</a></li></ol></li><li class="chapter-item expanded "><a href="../contribute/index.html"><strong aria-hidden="true">5.</strong> Contribute</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Ouinet Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="testing-desktop"><a class="header" href="#testing-desktop">Testing (desktop)</a></h1>
+<h2 id="running-a-test-injector"><a class="header" href="#running-a-test-injector">Running a test injector</a></h2>
+<p>If you want to run your own injector for testing and you have a local build,
+create a copy of the <code>repos/injector</code> repository template directory included
+in Ouinet's source tree:</p>
+<pre><code>$ cp -r &lt;SOURCE DIR&gt;/repos/injector /path/to/injector-repo
+</code></pre>
+<p>When using a Docker-based injector as described above, just run and stop it so
+that it creates a default configuration for you.</p>
+<p>You should now edit <code>ouinet-injector.conf</code> in the injector repository (for
+Docker, use the shell container to edit <code>injector/ouinet-injector.conf</code>):</p>
+<ol>
+<li>
+<p>Enable listening on loopback addresses:</p>
+<pre><code>listen-tcp = ::1:7070
+</code></pre>
+<p>For clients you may then use <code>127.0.0.1:7070</code> as the <em>injector endpoint</em>
+(IPv6 is not yet supported).</p>
+</li>
+<li>
+<p>Change the credentials to use the injector (use your own ones):</p>
+<pre><code>credentials = injector_user:injector_password
+</code></pre>
+<p>For clients you may use these as <em>injector credentials</em>.</p>
+</li>
+</ol>
+<p>All the steps above only need to be done once.</p>
+<p>Finally, start the injector.  For the local build you will need to explicitly
+point it to the repository created above:</p>
+<pre><code>$ &lt;BUILD DIR&gt;/injector --repo /path/to/injector-repo
+...
+[INFO] HTTP signing public key (Ed25519): &lt;CACHE_PUB_KEY&gt;
+...
+</code></pre>
+<p>Note down the <code>&lt;CACHE_PUB_KEY&gt;</code> string in the above output since clients will
+need it as the <em>public key for HTTP signatures</em>.  You may also find that value
+in the <code>ed25519-public-key</code> file in the injector repository.</p>
+<p>When you are done testing the Ouinet injector, you may shut it down by hitting
+Ctrl+C.</p>
+<h2 id="running-a-test-client"><a class="header" href="#running-a-test-client">Running a test client</a></h2>
+<p>To perform some tests using a Ouinet client and an existing test injector, you
+first need to know the <em>injector endpoint</em> and <em>credentials</em>, its <em>TLS
+certificate</em>, and its <em>public key for HTTP signatures</em>.  These use to be
+respectively a <code>tcp:&lt;IP&gt;:&lt;PORT&gt;</code> string, a <code>&lt;USER&gt;:&lt;PASSWORD&gt;</code> string, a path
+to a PEM file, and an Ed25519 public key (hexadecimal or Base32).</p>
+<p>You need to configure the Ouinet client to use the aforementioned parameters.
+If you have a local build, create a copy of the <code>repos/client</code> repository
+template directory included in Ouinet's source tree:</p>
+<pre><code>$ cp -r &lt;SOURCE DIR&gt;/repos/client /path/to/client-repo
+</code></pre>
+<p>When using a Docker-based client as described above, just run and stop it so
+that it creates a default configuration for you.</p>
+<p>Now edit <code>ouinet-client.conf</code> in the client repository (for Docker, use the
+shell container to edit <code>client/ouinet-client.conf</code>) and add options for the
+injector endpoint (if testing), credentials and public key.  Remember to
+replace the values with your own:</p>
+<pre><code>injector-ep = tcp:127.0.0.1:7070
+injector-credentials = injector_user:injector_password
+cache-http-public-key = 00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff
+cache-type = bep5-http
+</code></pre>
+<p>All the steps above only need to be done once.</p>
+<p>Finally, start the client.  For the local build you will need to explicitly
+point it to the repository created above:</p>
+<pre><code>$ &lt;BUILD DIR&gt;/client --repo /path/to/client-repo
+</code></pre>
+<p>The client opens a web proxy on local port 8077 by default (see option
+<code>listen-on-tcp</code> in its configuration file).  When you access the web using
+this proxy (see the following section), your requests will go through your
+local Ouinet client, which will attempt several mechanisms supported by Ouinet
+to retrieve the resource.</p>
+<p>When you are done testing the Ouinet client, you may shut it down by hitting
+Ctrl+C.</p>
+<h3 id="a-note-on-persistent-options"><a class="header" href="#a-note-on-persistent-options">A note on persistent options</a></h3>
+<p>Please note that a few selected options (like the log level and which request
+mechanisms are enabled) are saved when changed, either from the command line
+or the client front-end (see below).</p>
+<p>On client start, the values of saved options take precedence over those in the
+configuration file, but not over those in the command line.  You can use the
+<code>--drop-saved-opts</code> option to drop the values of saved options altogether.</p>
+<p>Please run the client with <code>--help</code> to see which options are persistent.</p>
+<h2 id="testing-the-client-with-a-browser"><a class="header" href="#testing-the-client-with-a-browser">Testing the client with a browser</a></h2>
+<p>Once your local Ouinet client is running (see above), if you have Firefox
+installed, you can create a new profile (stored under the <code>ff-profile</code>
+directory in the example below) which uses the Ouinet client as an HTTP proxy
+(listening on <code>localhost:8077</code> here) by executing the following commands on
+another shell:</p>
+<pre><code>mkdir -p ff-profile
+env http_proxy=http://localhost:8077 https_proxy=http://localhost:8077 \
+    firefox --no-remote --profile ff-profile
+</code></pre>
+<p>Otherwise you may manually <a href="http://www.wikihow.com/Enter-Proxy-Settings-in-Firefox" title="How to Enter Proxy Settings in Firefox">modify your browser's settings</a> to
+make the client (listening on host <code>localhost</code> and port 8077 here) its HTTP
+and HTTPS/SSL proxy.</p>
+<p>Please note that you do not need to change proxy settings at all when using
+CENO Extension &gt;= v1.4.0 (see below), as long as your client is listening on
+the default address shown above.</p>
+<p>To reduce noise in the client log, you may want to disable Firefox's data
+collection by unchecking all options from &quot;Preferences / Privacy &amp; Security /
+Firefox Data Collection and Use&quot;, and maybe entering <code>about:config</code> in the
+location bar and clearing the value of <code>toolkit.telemetry.server</code>.  You can
+also avoid some more noise by disabling Firefox's automatic captive portal
+detection by changing <code>network.captive-portal-service.enabled</code> to <code>false</code> in
+<code>about:config</code>.</p>
+<p>If security does not worry you for testing, you can avoid even more noise by
+disabling Safe Browsing under &quot;Preferences / Privacy &amp; Security / Deceptive
+Content and Dangerous Software Protection&quot; and add-on hotfixes at &quot;Preferences
+/ Add-ons / (gear icon) / Update Add-ons Automatically&quot;.</p>
+<p>Also, if you want to avoid wasting Ouinet network resources and disk space on
+ads and similar undesired content, you can install an ad blocker like
+<a href="https://github.com/gorhill/uBlock">uBlock Origin</a>.</p>
+<p>Once done, you can visit <code>localhost:8078</code> in your browser and it should show
+you the <em>client front-end</em> with assorted information from the client and
+configuration tools:</p>
+<ul>
+<li>
+<p>To be able to browse HTTPS sites, you must first install the
+<em>client-specific CA certificate</em> linked from the top of the front-end page
+and authorize it to identify web sites.  Depending on your browser
+version, you may need to save it to disk first, then import it from
+<em>Preferences / Privacy &amp; Security / Certificates / View Certificates…</em>
+into the <em>Authorities</em> list.</p>
+<p>The Ouinet client acts as a <em>man in the middle</em> to enable it to process
+HTTPS requests, but it (or a trusted injector when appropriate) still
+performs all standard certificate validations.  This CA certificate is
+unique to your device.</p>
+</li>
+<li>
+<p>Several buttons near the top of the page look something like this:</p>
+<pre><code>Injector access: enabled [ disable ]
+</code></pre>
+<p>They allow you to enable or disable different <em>request mechanisms</em> to
+retrieve content:</p>
+<ul>
+<li><em>Origin</em>: The client contacts the origin server directly via HTTP(S).</li>
+<li><em>Proxy</em>: The client contacts the origin server through an HTTP proxy
+(currently the configured injector).</li>
+<li><em>Injector</em>: The client asks the injector to fetch and sign the content
+from the origin server, then it starts seeding the signed content to
+the distributed cache.</li>
+<li><em>Distributed Cache</em>: The client attempts to retrieve the content from
+the distributed cache.</li>
+</ul>
+<p>Content retrieved via the Origin and Proxy mechanisms is considered
+<em>private and not seeded</em> to the distributed cache.  Content retrieved via
+the Injector and Cache mechanisms is considered <em>public and seeded</em> to the
+distributed cache.</p>
+<p>These mechanisms are attempted in order according to a (currently
+hard-wired, customizable in the future) <em>request router configuration</em>.
+For instance, if one points the browser to a web page which is not yet
+in the distributed cache, then the client shall forward the request to the
+injector.  On success, (A) the injector will fetch, sign and send the
+content back to the client and (B) the client will seed the content to the
+cache.</p>
+</li>
+<li>
+<p>Other information about the cache index is shown next.</p>
+</li>
+</ul>
+<p><strong>Note:</strong> For a response to be injected, its request currently needs to carry
+an <code>X-Ouinet-Group</code> header.  The <a href="https://github.com/censorship-no/ceno-ext-settings/">CENO Extension</a> takes care of that
+whenever browsing in normal mode, and it does not when browsing in private
+mode.  Unfortunately, the Extension is not yet packaged independently and the
+only way to use it is to clone its repository locally and load it every time
+you start the browser; to do that, open Firefox's <em>Add-ons</em> window, then click
+on the gears icon, then <em>Debug Add-ons</em>, then <em>Load Temporary Add-on…</em> and
+choose the <code>manifest.json</code> file in the Extension's source tree.  Back to the
+<em>Add-ons</em> page, remember to click on <em>CENO Extension</em> and allow <em>Run in
+Private Windows</em> under <em>Details</em>.</p>
+<p>After visiting a page with the Origin mechanism disabled and Injector
+mechanism enabled, and waiting for a short while, you should be able to
+disable all request mechanisms except for the Cache, clear the browser's
+cached data, point the browser back to the same page and still get its
+contents from the distributed cache even when the origin server is completely
+unreachable.</p>
+<h2 id="using-an-external-static-cache"><a class="header" href="#using-an-external-static-cache">Using an external static cache</a></h2>
+<p>Ouinet supports circulating cached Web content offline as file storage and
+using a client to seed it back into the distributed cache.  Such content is
+placed in a <em>static cache</em>, which is read-only and consists of two
+directories:</p>
+<ul>
+<li>
+<p>A <em>static cache root</em> or content directory where data files are stored in
+a hierarchy which may make sense for user browsing.</p>
+</li>
+<li>
+<p>A <em>static cache repository</em> where Ouinet-specific metadata and signatures
+for the previous content are kept.</p>
+</li>
+</ul>
+<p>To give your client access to a static cache, use the <code>cache-static-root</code> and
+<code>cache-static-repo</code> options to point to the appropriate directories.  If the
+later is not specified, the <code>.ouinet</code> subdirectory under the static cache root
+is assumed.</p>
+<p>Please note that all content in the static cache is permanently announced by
+the client, and that purging the client's local cache has no effect on the
+static cache.  When cached content is requested from a client, the client
+first looks up the content in its local cache, with the static cache being
+used as a fallback.</p>
+<p>Any user can create such a static cache as a capture of a browsing session by
+copying the <code>bep5_http</code> directory of the client's repository as a static cache
+repository (with an empty static cache root).  We recommend that you purge
+your local cache before starting the browsing session to avoid leaking your
+previous browsing to other users.</p>
+<p>If you are a content provider in possession of your own signing key, please
+check the <a href="https://github.com/equalitie/ouinet-inject">ouinet-inject</a> tool, which allows you to create a static cache
+from a variety of sources.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../build/vagrant.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../integration/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../build/vagrant.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../integration/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

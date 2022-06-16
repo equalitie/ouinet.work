@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Vagrant - Ouinet Documentation</title>
+
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../FontAwesome/css/all.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/all.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var body = document.querySelector('body');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+		<img src="../img/ouinet-logo.png" style="width:200px">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Welcome</a></li><li class="chapter-item expanded "><a href="../intro/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../build/index.html"><strong aria-hidden="true">2.</strong> Building from Source</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../build/docker.html"><strong aria-hidden="true">2.1.</strong> Docker</a></li><li class="chapter-item expanded "><a href="../build/vagrant.html" class="active"><strong aria-hidden="true">2.2.</strong> Vagrant</a></li><li class="chapter-item expanded "><a href="../build/testing.html"><strong aria-hidden="true">2.3.</strong> Testing</a></li></ol></li><li class="chapter-item expanded "><a href="../integration/index.html"><strong aria-hidden="true">3.</strong> Integration Guide</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../integration/examples.html"><strong aria-hidden="true">3.1.</strong> Example Apps</a></li></ol></li><li class="chapter-item expanded "><a href="../how/index.html"><strong aria-hidden="true">4.</strong> How it Works</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../how/components.html"><strong aria-hidden="true">4.1.</strong> Actors and Components</a></li><li class="chapter-item expanded "><a href="../how/content.html"><strong aria-hidden="true">4.2.</strong> Content Access Systems</a></li><li class="chapter-item expanded "><a href="../how/cache.html"><strong aria-hidden="true">4.3.</strong> Distributed Cache</a></li><li class="chapter-item expanded "><a href="../how/injectors.html"><strong aria-hidden="true">4.4.</strong> Injector Servers</a></li><li class="chapter-item expanded "><a href="../how/client.html"><strong aria-hidden="true">4.5.</strong> Client Library</a></li></ol></li><li class="chapter-item expanded "><a href="../contribute/index.html"><strong aria-hidden="true">5.</strong> Contribute</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Ouinet Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="using-a-vagrant-environment"><a class="header" href="#using-a-vagrant-environment">Using a Vagrant environment</a></h1>
+<p>One of the easiest ways to build Ouinet from source code (e.g. for development
+or testing changes and fixes to code) is using a <a href="https://www.vagrantup.com/">Vagrant</a> development
+environment.</p>
+<p>To install Vagrant on a Debian system, run:</p>
+<pre><code>$ sudo apt-get install vagrant
+</code></pre>
+<p>Ouinet's source tree contains a <code>Vagrantfile</code> which allows you to start a
+Vagrant environment ready to build and run Ouinet by entering the source
+directory and executing:</p>
+<pre><code>$ vagrant up
+</code></pre>
+<p>If your Vagrant installation uses VirtualBox by default and you find problems,
+you may need to force it to use libvirt instead:</p>
+<pre><code>$ sudo apt-get install libvirt-bin libvirt-dev
+$ vagrant plugin install vagrant-libvirt
+$ vagrant up --provider=libvirt
+</code></pre>
+<h2 id="building-ouinet-in-vagrant"><a class="header" href="#building-ouinet-in-vagrant">Building Ouinet in Vagrant</a></h2>
+<p>Enter the Vagrant environment with <code>vagrant ssh</code>.  There you will find:</p>
+<ul>
+<li>
+<p>Your local Ouinet source tree mounted read-only under <code>/vagrant</code>
+(<code>&lt;SOURCE DIR&gt;</code> above).</p>
+</li>
+<li>
+<p>Your local Ouinet source tree mounted read-write under <code>/vagrant-rw</code>.  You
+can use it as a bridge to your host.</p>
+</li>
+<li>
+<p><code>~vagrant/build-ouinet-git.sh</code>: Running this script will clone the Ouinet
+Git repository and all submodules into <code>$PWD/ouinet-git-source</code> and build
+Ouinet into <code>$PWD/ouinet-git-build</code> (<code>&lt;BUILD DIR&gt;</code> above).  Changes to
+source outside of the Vagrant environment will not affect this build.</p>
+</li>
+<li>
+<p><code>~vagrant/build-ouinet-local.sh</code>: Running this script will use your local
+Ouinet source tree (mounted under <code>/vagrant</code>) to build Ouinet into
+<code>$PWD/ouinet-local-build</code> (<code>&lt;BUILD DIR&gt;</code> above).  Thus you can edit source
+files on your computer and have them built in a consistent environment.</p>
+<p>Please note that this requires that you keep submodules in your checkout
+up to date as indicated above.</p>
+</li>
+</ul>
+<h2 id="accessing-ouinet-services-from-your-computer"><a class="header" href="#accessing-ouinet-services-from-your-computer">Accessing Ouinet services from your computer</a></h2>
+<p>The Vagrant environment is by default isolated, but you can configure it to
+redirect ports from the host to the environment.</p>
+<p>For instance, if you want to run a Ouinet client (with its default
+configuration) in Vagrant and use it as a proxy in a browser on your computer,
+you may uncomment the following line in <code>Vagrantfile</code>:</p>
+<pre><code>#vm.vm.network &quot;forwarded_port&quot;, guest: 8077, host: 8077, guest_ip: &quot;127.0.0.1&quot;
+</code></pre>
+<p>And restart the environment:</p>
+<pre><code>$ vagrant halt
+$ vagrant up
+</code></pre>
+<p>Then you can configure your browser to use <code>localhost</code> port 8077 to contact
+the HTTP proxy (see the section further below).</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../build/docker.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../build/testing.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../build/docker.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../build/testing.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
