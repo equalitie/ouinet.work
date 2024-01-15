@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-11 12:22-0700\n"
+"POT-Creation-Date: 2024-01-15 14:20-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -99,8 +99,9 @@ msgid ""
 "everyone online."
 msgstr ""
 
-#.  TRANSLATORS: Please do not translate this. 
-#: about.html%2Bhtml.body.footer:158-23
+#. div class="push"></div><br>
+#. <!-- TRANSLATORS: Please do not translate this. 
+#: about.html%2Bhtml.body.footer:157-9
 msgid ""
 "© Ouinet 2018<script>new Date().getFullYear()>2018&&document.write(\"-\"+new "
 "Date().getFullYear());</script>"
