@@ -3,46 +3,44 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-15 14:20-0700\n"
-"PO-Revision-Date: 2024-01-15 22:25+0000\n"
-"Last-Translator: Jenny Ryan <jenny@equalitie.org>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/ouinet/"
-"website-home/es/>\n"
-"Language: es\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Translate Toolkit 3.6.0\n"
 
 #: index.html%2Bhtml[lang]:4-1
 msgid "en"
-msgstr "es"
+msgstr ""
 
 #: index.html%2Bhtml.body.nav.div.div.ul.li:85-17
 msgid "About"
-msgstr "Acerca de"
+msgstr ""
 
 #.  TODO: html2po cannot make the href translatable, so point to the Manual's language chooser. 
 #.  TRANSLATORS: Replace "en" in the link by your language code if the Manual is available for it. 
 #: index.html%2Bhtml.body.nav.div.div.ul.li:88-17
 msgid "Docs"
-msgstr "Documentos"
+msgstr ""
 
 #: index.html%2Bhtml.body.nav.div.div.ul.li:93-17
 msgid "Community"
-msgstr "Comunidad"
+msgstr ""
 
 #: index.html%2Bhtml.body.main.title:123-1
 msgid "Censorship.no! - Browse Freely"
-msgstr "¡Censura.no! - Navegue libremente"
+msgstr ""
 
 #: index.html%2Bhtml.body.main.title:124-1
 msgid "Ouinet | Peer to peer to freedom"
-msgstr "Ouinet | De igual a igual hacia la libertad"
+msgstr ""
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.h1:136-7
 msgid "Bypass internet shutdowns with Ouinet"
-msgstr "Evita los cortes de Internet con Ouinet"
+msgstr ""
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.p:137-3
 msgid ""
@@ -51,47 +49,33 @@ msgid ""
 "unreliable or unavailable, tailored for scenarios of limited internet "
 "connectivity and selective network traffic filtering."
 msgstr ""
-"Ouinet es un conjunto de herramientas de software e infraestructura de apoyo "
-"que proporcionan acceso a los recursos web cuando el acceso a Internet sin "
-"restricciones no es fiable o no está disponible, adaptado a escenarios de "
-"conectividad limitada a Internet y filtrado selectivo del tráfico de red."
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.p:138-3
 msgid ""
 "Interested in enabling Ouinet's peer-to-peer functionality in your app? Get "
 "the SDK and learn more in our <a href=\"docs.html\">Integration Guide</a>."
 msgstr ""
-"¿Está interesado en habilitar la funcionalidad punto a punto de Ouinet en su "
-"aplicación? Obtenga el SDK y obtenga más información en nuestra <a "
-"href=\"docs.html\">Guía de integración</a>."
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.p:139-3
 msgid ""
-"<a href=\"https://gitlab.com/equalitie/ouinet\" style=\"text-align:"
-"center\"><button class=\"btn btn-outline-danger mt-3 mb-3\" type=\"button\" "
-"style=\"text-align: center;\">Get the SDK</button></a> <a href=\"docs.html\" "
-"style=\"text-align:center\"><button class=\"btn btn-outline-danger mt-3 "
-"mb-3\" type=\"button\" style=\"text-align: center;\">Integration Guide</"
-"button></a>"
-msgstr ""
 "<a href=\"https://gitlab.com/equalitie/ouinet\" style=\"text-align:center\""
 "><button class=\"btn btn-outline-danger mt-3 mb-3\" type=\"button\" style"
-"=\"text-align: center;\">Obtener el SDK</button></a> <a href=\"docs.html\" "
-"style=\"text-align:center\"><button class=\"btn btn-outline-danger mt-3 mb-"
-"3\" type=\"button\" style=\"text-align: center;\">Guía para la "
-"integración</button></a>"
+"=\"text-align: center;\">Get the SDK</button></a> <a href=\"docs.html\" style"
+"=\"text-align:center\"><button class=\"btn btn-outline-danger mt-3 mb-3\" "
+"type=\"button\" style=\"text-align: center;\">Integration Guide</button></a>"
+msgstr ""
 
 #: index.html%2Bhtml.body.main.section.div.h1:150-9
 msgid "Current implementations:"
-msgstr "Aplicaciones actuales:"
+msgstr ""
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.a.div.img[alt]:155-14
 msgid "Browse Freely"
-msgstr "Navegue con libertad"
+msgstr ""
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.a.div.h3:156-15
 msgid "Ceno Browser"
-msgstr "Ceno Browser"
+msgstr ""
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.p:157-15
 msgid ""
@@ -99,17 +83,14 @@ msgid ""
 "internet is down or censored. Install Ceno Browser today and be prepared for "
 "the next time you get 🔌 unplugged."
 msgstr ""
-"Accede a contenidos web a través de una red de pares que cooperan, incluso "
-"cuando Internet está caído o censurado. Instala Ceno Browser hoy y prepárate "
-"para la próxima vez que te 🔌 desconectes."
 
 #: index.html%2Bhtml.body.main.section.div.div.div.a.div.img[alt]:164-13
 msgid "Grow the network - Become a bridge!"
-msgstr "Haz crecer la red - ¡Conviértete en un puente!"
+msgstr ""
 
 #: index.html%2Bhtml.body.main.section.div.div.div.a.div.h3:165-15
 msgid "Paskoocheh"
-msgstr "Paskoocheh"
+msgstr ""
 
 #: index.html%2Bhtml.body.main.section.div.div.div.p:166-15
 msgid ""
@@ -117,18 +98,14 @@ msgid ""
 "to circumvention and privacy tools, with peer-to-peer sharing of apps in "
 "shutdown scenarios powered by Ouinet."
 msgstr ""
-"Paskoocheh (que en farsi significa \"camino del callejón\") es una tienda de "
-"aplicaciones que facilita el acceso a herramientas de elusión y privacidad, "
-"con intercambio de aplicaciones entre iguales en escenarios de desconexión "
-"impulsado por Ouinet."
 
 #: index.html%2Bhtml.body.main.section.div.div.div.img[alt]:173-13
 msgid "Free and Open Source"
-msgstr "Libre y de código abierto"
+msgstr ""
 
 #: index.html%2Bhtml.body.main.section.div.div.div.h3:174-15
 msgid "Your Project!"
-msgstr "¡Tu proyecto!"
+msgstr ""
 
 #: index.html%2Bhtml.body.main.section.div.div.div.p:175-15
 msgid ""
@@ -136,10 +113,6 @@ msgid ""
 "Visit our <a href=\"../about.html\">Integration Guide</a> or contact us via "
 "the chat form at the bottom of this page."
 msgstr ""
-"¿Está interesado en habilitar la funcionalidad punto a punto de Ouinet en su "
-"aplicación? Visite nuestra <a href=\"../about.html\">Guía de integración</a> "
-"o contáctenos a través del formulario de chat en la parte inferior de esta "
-"página."
 
 #: index.html%2Bhtml.body.footer.div.p:191-9
 msgid ""
@@ -150,13 +123,6 @@ msgid ""
 "values/\">values</a> that guide us to protect the rights and aspirations of "
 "everyone online."
 msgstr ""
-"Ouinet es un proyecto de <a href=\"https://equalit.ie\">eQualit.ie</a>, una "
-"empresa canadiense sin fines de lucro que desarrolla sistemas abiertos y "
-"reutilizables centrados en la privacidad, la seguridad en línea y la "
-"libertad. de asociación Las soluciones e innovaciones tecnológicas están "
-"impulsadas por nuestros <a href=\"https://equalit.ie/en/values/\">valores</"
-"a> que nos guían para proteger los derechos y las aspiraciones de todos en "
-"línea."
 
 #. div class="push"></div><br>
 #. <!-- TRANSLATORS: Please do not translate this. 
@@ -165,5 +131,3 @@ msgid ""
 "© Ouinet 2018<script>new Date().getFullYear()>2018&&document.write(\"-\"+new "
 "Date().getFullYear());</script>"
 msgstr ""
-"© Ouinet 2018<script>new Date().getFullYear()>2018&&document.write(\"-\"+new "
-"Date().getFullYear());</script>"

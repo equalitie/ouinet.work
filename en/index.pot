@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-11 12:22-0700\n"
+"POT-Creation-Date: 2024-01-15 14:20-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,7 +58,7 @@ msgstr ""
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.p:139-3
 msgid ""
-"<a href=\"https://github.com/equalitie/ouinet\" style=\"text-align:center\""
+"<a href=\"https://gitlab.com/equalitie/ouinet\" style=\"text-align:center\""
 "><button class=\"btn btn-outline-danger mt-3 mb-3\" type=\"button\" style"
 "=\"text-align: center;\">Get the SDK</button></a> <a href=\"docs.html\" style"
 "=\"text-align:center\"><button class=\"btn btn-outline-danger mt-3 mb-3\" "
@@ -74,13 +74,13 @@ msgid "Browse Freely"
 msgstr ""
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.a.div.h3:156-15
-msgid "CENO Browser"
+msgid "Ceno Browser"
 msgstr ""
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.p:157-15
 msgid ""
 "Access web content through a network of cooperating peers - even when the "
-"internet is down or censored. Install CENO Browser today and be prepared for "
+"internet is down or censored. Install Ceno Browser today and be prepared for "
 "the next time you get 🔌 unplugged."
 msgstr ""
 
@@ -124,8 +124,9 @@ msgid ""
 "everyone online."
 msgstr ""
 
-#.  TRANSLATORS: Please do not translate this. 
-#: index.html%2Bhtml.body.footer:193-23
+#. div class="push"></div><br>
+#. <!-- TRANSLATORS: Please do not translate this. 
+#: index.html%2Bhtml.body.footer:192-9
 msgid ""
 "© Ouinet 2018<script>new Date().getFullYear()>2018&&document.write(\"-\"+new "
 "Date().getFullYear());</script>"
