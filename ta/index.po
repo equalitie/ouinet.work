@@ -3,44 +3,46 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-15 14:20-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-01-26 07:04+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/ouinet/"
+"website-home/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.6.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #: index.html%2Bhtml[lang]:4-1
 msgid "en"
-msgstr ""
+msgstr "என்"
 
 #: index.html%2Bhtml.body.nav.div.div.ul.li:85-17
 msgid "About"
-msgstr ""
+msgstr "பற்றி"
 
 #.  TODO: html2po cannot make the href translatable, so point to the Manual's language chooser. 
 #.  TRANSLATORS: Replace "en" in the link by your language code if the Manual is available for it. 
 #: index.html%2Bhtml.body.nav.div.div.ul.li:88-17
 msgid "Docs"
-msgstr ""
+msgstr "கோப்புகள்"
 
 #: index.html%2Bhtml.body.nav.div.div.ul.li:93-17
 msgid "Community"
-msgstr ""
+msgstr "சமூகம்"
 
 #: index.html%2Bhtml.body.main.title:123-1
 msgid "Censorship.no! - Browse Freely"
-msgstr ""
+msgstr "தணிக்கை. இல்லை! - சுதந்திரமாக உலாவுக"
 
 #: index.html%2Bhtml.body.main.title:124-1
 msgid "Ouinet | Peer to peer to freedom"
-msgstr ""
+msgstr "ஓவினெட் | சுதந்திரத்திற்கு சகாக இருக்கும்"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.h1:136-7
 msgid "Bypass internet shutdowns with Ouinet"
-msgstr ""
+msgstr "ஓவினெட்டுடன் இணைய பணிநிறுத்தங்களை பைபாச் செய்யுங்கள்"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.p:137-3
 msgid ""
@@ -49,12 +51,18 @@ msgid ""
 "unreliable or unavailable, tailored for scenarios of limited internet "
 "connectivity and selective network traffic filtering."
 msgstr ""
+"ஓவினெட் என்பது மென்பொருள் கருவிகள் மற்றும் உதவி உள்கட்டமைப்பின் தொகுப்பாகும், இது "
+"கட்டுப்பாடற்ற இணையத்தை அணுகும் போது வலை வளங்களுக்கான அணுகலை வழங்கும் நம்பமுடியாதது "
+"அல்லது கிடைக்காது, இது வரையறுக்கப்பட்ட இணைய இணைப்பு மற்றும் தேர்ந்தெடுக்கப்பட்ட பிணைய "
+"போக்குவரத்து வடிகட்டலின் காட்சிகளுக்கு வடிவமைக்கப்பட்டுள்ளது."
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.p:138-3
 msgid ""
 "Interested in enabling Ouinet's peer-to-peer functionality in your app? Get "
 "the SDK and learn more in our <a href=\"docs.html\">Integration Guide</a>."
 msgstr ""
+"உங்கள் பயன்பாட்டில் ஓயினின் பியர்-டு-பியர் செயல்பாட்டை இயக்குவதில் ஆர்வமா? SDK ஐப் பெற்று "
+"மேலும் எங்கள் <a href = \"docs.html\"> ஒருங்கிணைப்பு வழிகாட்டி </a> இல் மேலும் அறிக."
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.p:139-3
 msgid ""
@@ -64,18 +72,24 @@ msgid ""
 "=\"text-align:center\"><button class=\"btn btn-outline-danger mt-3 mb-3\" "
 "type=\"button\" style=\"text-align: center;\">Integration Guide</button></a>"
 msgstr ""
+"<a href = \"https://gitlab.com/equalitie/ouinte\" சூல் தண்டு = "
+"\"text-align: மையம்\"> <பொத்தான் வகுப்பு = \"BTN BTN-OUTLINE-DANGER MT-3 MB-3\" "
+"வகை = \"பொத்தான்\" சூல் தண்டு = \"text-align: மையம்;\"> SDK ஐப் பெறுங்கள் </பொத்தான்> "
+"</a> <a href = \"docs.html\" சூல் தண்டு = \"text-align: மையம்\"> <பொத்தான் வகுப்பு "
+"= \"btn btn-outline -டேஞ்சர் MT-3 MB-3 \"வகை =\" பொத்தான் \"style ="
+"\" text-align: மையம்; \"> ஒருங்கிணைப்பு வழிகாட்டி </பொத்தான்> </a>"
 
 #: index.html%2Bhtml.body.main.section.div.h1:150-9
 msgid "Current implementations:"
-msgstr ""
+msgstr "தற்போதைய செயலாக்கங்கள்:"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.a.div.img[alt]:155-14
 msgid "Browse Freely"
-msgstr ""
+msgstr "சுதந்திரமாக உலாவுக"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.a.div.h3:156-15
 msgid "Ceno Browser"
-msgstr ""
+msgstr "விலை உலாவி"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.p:157-15
 msgid ""
@@ -83,14 +97,17 @@ msgid ""
 "internet is down or censored. Install Ceno Browser today and be prepared for "
 "the next time you get 🔌 unplugged."
 msgstr ""
+"ஒத்துழைக்கும் சகாக்களின் பிணையம் மூலம் வலை உள்ளடக்கத்தை அணுகவும் - இணையம் குறைந்துவிட்டாலும்"
+" அல்லது தணிக்கை செய்யப்பட்டாலும் கூட. இன்று செனோ உலாவியை நிறுவி, அடுத்த முறை நீங்கள் 🔌 "
+"அவிழ்க்கப்படும்போது தயாராக இருங்கள்."
 
 #: index.html%2Bhtml.body.main.section.div.div.div.a.div.img[alt]:164-13
 msgid "Grow the network - Become a bridge!"
-msgstr ""
+msgstr "நெட்வொர்க்கை வளர்க்கவும் - ஒரு பாலமாக மாறவும்!"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.a.div.h3:165-15
 msgid "Paskoocheh"
-msgstr ""
+msgstr "பாச்கூச்"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.p:166-15
 msgid ""
@@ -98,14 +115,17 @@ msgid ""
 "to circumvention and privacy tools, with peer-to-peer sharing of apps in "
 "shutdown scenarios powered by Ouinet."
 msgstr ""
+"பாச்கூச்சே (“ஆலி வே” க்கான ஃபார்சி) என்பது ஒரு பயன்பாட்டுக் கடையாகும், இது சுற்றறிக்கை "
+"மற்றும் தனியுரிமைக் கருவிகளை எளிதாக அணுக உதவுகிறது, ஓவினெட் இயக்கும் பணிநிறுத்தம் "
+"காட்சிகளில் பயன்பாடுகளை பியர்-டு-பியர் பகிர்வது."
 
 #: index.html%2Bhtml.body.main.section.div.div.div.img[alt]:173-13
 msgid "Free and Open Source"
-msgstr ""
+msgstr "இலவச மற்றும் திறந்த மூல"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.h3:174-15
 msgid "Your Project!"
-msgstr ""
+msgstr "உங்கள் திட்டம்!"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.p:175-15
 msgid ""
@@ -113,6 +133,9 @@ msgid ""
 "Visit our <a href=\"../about.html\">Integration Guide</a> or contact us via "
 "the chat form at the bottom of this page."
 msgstr ""
+"உங்கள் பயன்பாட்டில் ஓயினின் பியர்-டு-பியர் செயல்பாட்டை இயக்குவதில் ஆர்வமா? எங்கள் <a href = "
+"\"../ geal.html\"> ஒருங்கிணைப்பு வழிகாட்டி </a> ஐப் பார்வையிடவும் அல்லது இந்த பக்கத்தின்"
+" கீழே உள்ள அரட்டை படிவம் வழியாக எங்களை தொடர்பு கொள்ளவும்."
 
 #: index.html%2Bhtml.body.footer.div.p:191-9
 msgid ""
@@ -123,6 +146,12 @@ msgid ""
 "values/\">values</a> that guide us to protect the rights and aspirations of "
 "everyone online."
 msgstr ""
+"OUinet என்பது <a href = \"https://equalit.ie\"> eameit.ie </a>-தனியுரிமை, "
+"நிகழ்நிலை பாதுகாப்பு மற்றும் விடுதலை ஆகியவற்றை மையமாகக் கொண்டு திறந்த மற்றும் "
+"மறுபயன்பாட்டு அமைப்புகளை உருவாக்கும் இலாப நோக்கற்ற கனேடிய நிறுவனம் உருவாக்கும் ஒரு "
+"திட்டமாகும் சங்கம். தொழில்நுட்ப தீர்வுகள் மற்றும் புதுமைகள் எங்கள் <a href = "
+"\"https://equalit.ie/en/values/\"> மதிப்புகள் </a> ஆல் ஆன்லைனில் அனைவரின் "
+"உரிமைகளையும் அபிலாசைகளையும் பாதுகாக்க எங்களுக்கு வழிகாட்டுகின்றன."
 
 #. div class="push"></div><br>
 #. <!-- TRANSLATORS: Please do not translate this. 
@@ -131,3 +160,5 @@ msgid ""
 "© Ouinet 2018<script>new Date().getFullYear()>2018&&document.write(\"-\"+new "
 "Date().getFullYear());</script>"
 msgstr ""
+"© Ouinet 2018<script>new Date().getFullYear()>2018&&document.write(\"-\"+new "
+"Date().getFullYear());</script>"
