@@ -3,22 +3,24 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-15 14:20-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-03-31 13:36+0000\n"
+"Last-Translator: Kuzey Kuzey <kuzey7831@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/ouinet/"
+"website-home/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.6.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #: index.html%2Bhtml[lang]:4-1
 msgid "en"
-msgstr ""
+msgstr "ing"
 
 #: index.html%2Bhtml.body.nav.div.div.ul.li:85-17
 msgid "About"
-msgstr ""
+msgstr "Hakkında"
 
 #.  TODO: html2po cannot make the href translatable, so point to the Manual's language chooser. 
 #.  TRANSLATORS: Replace "en" in the link by your language code if the Manual is available for it. 
@@ -28,11 +30,11 @@ msgstr ""
 
 #: index.html%2Bhtml.body.nav.div.div.ul.li:93-17
 msgid "Community"
-msgstr ""
+msgstr "Topluluk"
 
 #: index.html%2Bhtml.body.main.title:123-1
 msgid "Censorship.no! - Browse Freely"
-msgstr ""
+msgstr "Censorship.no! - Özgürce Gezinin"
 
 #: index.html%2Bhtml.body.main.title:124-1
 msgid "Ouinet | Peer to peer to freedom"
