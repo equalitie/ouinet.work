@@ -162,7 +162,7 @@ msgstr ""
 "empresa canadiense sin fines de lucro que desarrolla sistemas abiertos y "
 "reutilizables centrados en la privacidad, la seguridad en línea y la "
 "libertad. de asociación Las soluciones e innovaciones tecnológicas están "
-"impulsadas por nuestros <a href=\"https://equalit.ie/en/values/\">valores</"
+"impulsadas por nuestros <a href=\"https://equalit.ie/our-values/\">valores</"
 "a> que nos guían para proteger los derechos y las aspiraciones de todos en "
 "línea."
 
