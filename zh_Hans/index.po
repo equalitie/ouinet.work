@@ -3,60 +3,73 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-15 14:20-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-05-29 16:10+0000\n"
+"Last-Translator: \"Cheng R.Zhu\" <zcr@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/ouinet/website-home/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.6.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #: index.html%2Bhtml[lang]:4-1
 msgid "en"
-msgstr ""
+msgstr "英语"
 
 #: index.html%2Bhtml.body.nav.div.div.ul.li:85-17
 msgid "About"
-msgstr ""
+msgstr "关于"
 
 #.  TODO: html2po cannot make the href translatable, so point to the Manual's language chooser. 
 #.  TRANSLATORS: Replace "en" in the link by your language code if the Manual is available for it. 
 #: index.html%2Bhtml.body.nav.div.div.ul.li:88-17
 msgid "Docs"
-msgstr ""
+msgstr "文档"
 
 #: index.html%2Bhtml.body.nav.div.div.ul.li:93-17
 msgid "Community"
-msgstr ""
+msgstr "社区"
 
 #: index.html%2Bhtml.body.main.title:123-1
+#, fuzzy
 msgid "Censorship.no! - Browse Freely"
-msgstr ""
+msgstr "Censorship.no! - 自由浏览"
 
 #: index.html%2Bhtml.body.main.title:124-1
+#, fuzzy
 msgid "Ouinet | Peer to peer to freedom"
-msgstr ""
+msgstr "Ouinet | 点对点自由通信"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.h1:136-7
+#, fuzzy
 msgid "Bypass internet shutdowns with Ouinet"
-msgstr ""
+msgstr "使用Ouinet绕过网络审查"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.p:137-3
+#, fuzzy
 msgid ""
 "Ouinet is a collection of software tools and support infrastructure that "
 "provide access to web resources when access to the unrestricted internet is "
 "unreliable or unavailable, tailored for scenarios of limited internet "
 "connectivity and selective network traffic filtering."
 msgstr ""
+"Ouinet是一个软件工具和支持基础设施的集合，当对不受限制的互联网的访问不可靠或"
+"不可用时，它提供对网络资源的访问，为有限的互联网连接和选择性网络流量过滤的场"
+"景量身定制。"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.p:138-3
+#, fuzzy
 msgid ""
 "Interested in enabling Ouinet's peer-to-peer functionality in your app? Get "
 "the SDK and learn more in our <a href=\"docs.html\">Integration Guide</a>."
 msgstr ""
+"有兴趣在您的应用中启用Ouinet的点对点通信功能吗？获取SDK并在我们的<a href="
+"\"docs.html\">集成指南</a>中了解更多信息。"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.p:139-3
+#, fuzzy
 msgid ""
 "<a href=\"https://gitlab.com/equalitie/ouinet\" style=\"text-align:center\""
 "><button class=\"btn btn-outline-danger mt-3 mb-3\" type=\"button\" style"
@@ -64,33 +77,43 @@ msgid ""
 "=\"text-align:center\"><button class=\"btn btn-outline-danger mt-3 mb-3\" "
 "type=\"button\" style=\"text-align: center;\">Integration Guide</button></a>"
 msgstr ""
+"<a href=\"https://gitlab.com/equalitie/ouinet\" style=\"text-align:center\""
+"><button class=\"btn btn-outline-danger mt-3 mb-3\" type=\"button\" style"
+"=\"text-align: center;\">获取 SDK</button></a> <a href=\"docs.html\" style"
+"=\"text-align:center\"><button class=\"btn btn-outline-danger mt-3 mb-3\" "
+"type=\"button\" style=\"text-align: center;\">集成指南</button></a>"
 
 #: index.html%2Bhtml.body.main.section.div.h1:150-9
+#, fuzzy
 msgid "Current implementations:"
-msgstr ""
+msgstr "当前实现"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.a.div.img[alt]:155-14
 msgid "Browse Freely"
-msgstr ""
+msgstr "自由浏览"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.a.div.h3:156-15
+#, fuzzy
 msgid "Ceno Browser"
-msgstr ""
+msgstr "Ceno浏览器"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.div.p:157-15
 msgid ""
 "Access web content through a network of cooperating peers - even when the "
 "internet is down or censored. Install Ceno Browser today and be prepared for "
 "the next time you get 🔌 unplugged."
-msgstr ""
+msgstr "通过去中心化节点访问互联网——即使网络遭到停用或审查。立即安装Ceno浏览器，为下"
+"一次断电做好准备。"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.a.div.img[alt]:164-13
+#, fuzzy
 msgid "Grow the network - Become a bridge!"
-msgstr ""
+msgstr "帮助网络发展——成为桥梁！"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.a.div.h3:165-15
+#, fuzzy
 msgid "Paskoocheh"
-msgstr ""
+msgstr "Paskoocheh"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.p:166-15
 msgid ""
@@ -98,6 +121,8 @@ msgid ""
 "to circumvention and privacy tools, with peer-to-peer sharing of apps in "
 "shutdown scenarios powered by Ouinet."
 msgstr ""
+"Paskoocheh（波斯语为“小巷”）是一个应用商店，可以轻松访问审查规避和隐私保护工"
+"具，在网络遭到审查的情况下，通过Ouinet支持的应用程序点对点通信。"
 
 #: index.html%2Bhtml.body.main.section.div.div.div.img[alt]:173-13
 msgid "Free and Open Source"
